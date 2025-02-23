@@ -1,7 +1,7 @@
 """
 UCSF BMI203: Biocomputing Algorithms 2024
-Author:
-Date:
+Author: Chris Thompson
+Date: 02/22/25
 Package: 
 Description: 
 """

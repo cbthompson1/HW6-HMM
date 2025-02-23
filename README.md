@@ -1,3 +1,5 @@
+![BuildStatus](https://github.com/cbthompson1/BMI203-HW6-HMM/workflows/badge.svg?event=push)
+
 # HW6-HMM
 
 In this assignment, you'll implement the Forward and Viterbi Algorithms (dynamic programming). 
@@ -49,17 +51,35 @@ Finally, please update your README with a brief description of your methods.
 ## Task List
 
 [TODO] Complete the HiddenMarkovModel Class methods  <br>
-  [ ] complete the `forward` function in the HiddenMarkovModelClass <br>
-  [ ] complete the `viterbi` function in the HiddenMarkovModelClass <br>
+  [X] complete the `forward` function in the HiddenMarkovModelClass <br>
+  [X] complete the `viterbi` function in the HiddenMarkovModelClass <br>
 
 [TODO] Unit Testing  <br>
-  [ ] Ensure functionality on mini and full weather dataset <br>
-  [ ] Account for edge cases 
+  [X] Ensure functionality on mini and full weather dataset <br>
+  [X] Account for edge cases 
 
 [TODO] Packaging <br>
-  [ ] Update README with description of your methods <br>
+  [X] Update README with description of your methods <br>
   [ ] pip installable module (optional)<br>
   [ ] github actions (install + pytest) (optional)
+
+## Methods
+
+### Forward Algorithm
+The forward algorithm calculates the likelihood of a provided observed
+sequence by iteratively computing the probability of being in each hidden state
+at each iteration. The iterative computations are stored in a DP table to
+efficiently compute the final probability. The final result is the sum of the
+final row of the table, representing each potential end state.
+
+### Viterbi Algorithm
+The Viterbi algorithm determines the most likely sequence of hidden states that
+generated a provided sequence of observations. This method iteratively 
+calculates the maximum probability of each hidden state at each iteration, and
+stores these probabilities and the preceding states in two different NxT
+tables. Finally, a traceback procedure is used to reconstruct the optimal
+hidden state sequence from the stored information, returning it as the most
+probable path.
 
 
 ## Completing the Assignment 
